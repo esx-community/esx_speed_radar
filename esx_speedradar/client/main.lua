@@ -146,7 +146,7 @@ Citizen.CreateThread(function()
          	Info("Appuyez sur ~INPUT_CONTEXT~ pour ouvrir l'ordinateur")
           	DrawMarker(1, 1376.419,669.30, 78.93, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 3.0,3.0, 1.0, 250, 100,100, 100, false, true, 2, false, false, false, false)
          if(IsControlPressed(1, 38))then
-           GetFlashMenu("1")
+           GetFlashMenu("LS Freeway")
          end
       end
 
@@ -163,7 +163,7 @@ Citizen.CreateThread(function()
 								local vehicule_flash_modele = GetDisplayNameFromVehicleModel(GetEntityModel(vehicle_flash))
 
 			          is_flashed = true
-			          TriggerServerEvent('esx_peage:flashed',vehicle_flash_plaque,vitesse_flash,vehicule_flash_modele,"1")
+			          TriggerServerEvent('esx_peage:flashed',vehicle_flash_plaque,vitesse_flash,vehicule_flash_modele,"LS Freeway")
 								StartScreenEffect('SwitchShortMichaelIn',  400,  false)
 
 								end
