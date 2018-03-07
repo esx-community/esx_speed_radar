@@ -11,8 +11,9 @@ AddEventHandler('esx_peage:flashed', function(plaque,vitesse,modele,station)
 	local xPlayers = ESX.GetPlayers()
 	for i=1, #xPlayers, 1 do
 		local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
+		local vitesse2 = math.ceil(vitesse - 0.5)
 		if xPlayer.job.name == 'police' then
-			TriggerClientEvent('esx:showNotification', xPlayer.source,'Un véhicule a été ~b~ flashé~w~ près de la station : ~b~'.. station.."~w~.")
+			TriggerClientEvent('esx:showNotification', xPlayer.source,'~b~'.. modele ..'~w~ immatriculé ~b~' .. plaque .. '~w~ flashé à ~b~'.. vitesse2 .. '~w~ près de la station : ~b~'.. station.."~w~.")
 		end
 	end
 
