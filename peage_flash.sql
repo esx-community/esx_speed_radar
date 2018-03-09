@@ -11,7 +11,7 @@ CREATE TABLE `peage_flash` (
 
 
 INSERT INTO `peage_flash` (`id`, `plate`, `speed`, `modele`, `station`) VALUES
-(1, '09JBK526', 168, 'T20', 1),
+(1, '09JBK526', 168, 'T20', 1);
 
 
 
