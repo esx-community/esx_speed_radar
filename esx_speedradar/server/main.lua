@@ -5,8 +5,8 @@ RegisterServerEvent('esx_peage:flashed')
 AddEventHandler('esx_peage:flashed', function(plaque,vitesse,modele,station)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
-
 	local xPlayers = ESX.GetPlayers()
+
 	for i=1, #xPlayers, 1 do
 		local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
 		if xPlayer.job.name == 'police' then
@@ -15,8 +15,8 @@ AddEventHandler('esx_peage:flashed', function(plaque,vitesse,modele,station)
 	end
 
   MySQL.Async.execute('INSERT peage_flash (`plate`,`speed`,`modele`,`station`) VALUE(@plaque,@vitesse,@modele,@station) ', {
-    ['@plaque'] = plaque,
-    ['@vitesse'] = vitesse,
+                ['@plaque'] = plaque,
+                ['@vitesse'] = vitesse,
 		['@modele'] = modele,
 		['@station'] = station,
   }, function()
